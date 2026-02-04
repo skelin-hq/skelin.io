@@ -1,35 +1,23 @@
-# Manifesto
+# localhost.is
 
-## We believe in knowledge shared, not just consumed.
-Too many gatherings leave us with empty plates and foggy memories.
-We create spaces where what matters most is what we learn, exchange, and build together.
+A programming community in Iceland bringing developers, makers, and technology explorers together.
 
-## We believe in quality over quantity.
-A single meaningful talk is worth more than ten fleeting ones.
-Our get-togethers are designed to spark thought, inspire practice and leave traces that endure.
+## What We Do
 
-## We believe in openness and inclusivity.
-Origin, race, gender, sexuality, or background - none of these limit belonging here.
-Everyone is welcomed. Everyone is encouraged. Everyone has a place and a voice.
+We create spaces for meaningful knowledge exchange—where learning, sharing, and building together take priority over passive consumption. Our gatherings are designed to spark thought and inspire practice.
 
-## We believe in circles, not hierarchies.
-Through holacracy, roles are found, not imposed.
-Circles emerge around passion and curiosity, evolving as members grow and interests shift.
-Our core circle is here to nurture the framework, not to control it.
+## How We Organize
 
-## We believe in the freedom to contribute.
-Anyone may start a circle. Anyone may propose a role.
-Initiative is not reserved for the few - it belongs to all.
+We use a holacracy model with self-organizing **circles**. Anyone can start a circle around a shared interest or purpose. Roles emerge from passion and curiosity, not hierarchy.
 
-## We believe in accessibility.
-Remote or in person, our doors are open.
-Participation should never depend on location.
+## Our Values
 
-## We believe in learning together.
-This is a place for developers, makers, and explorers of technology.
-We honor both professional and hobbyist pursuits, respecting the craft in all its forms.
+- **Openness & Inclusivity** — Everyone is welcome regardless of background
+- **Quality over Quantity** — Meaningful interactions that leave lasting impact
+- **Accessibility** — Remote and in-person participation
+- **Freedom to Contribute** — Anyone can propose ideas and take initiative
+- **Safe Space** — Zero tolerance for hate speech and harassment
 
-## We believe in protecting the vulnerable.
-Tolerance does not extend to intolerance.
-We strictly forbid hate speech, harassment, or the spreading of intolerance.
-This is how we protect our members - especially those from marginalized or vulnerable groups - from bad actors.
+## Get Involved
+
+Check out [MANIFESTO.md](MANIFESTO.md) for our full beliefs and [CIRCLES.md](CIRCLES.md) to learn how to start or join a circle.
