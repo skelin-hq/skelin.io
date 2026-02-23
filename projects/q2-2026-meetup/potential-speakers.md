@@ -4,4 +4,4 @@ The following list are potential speakers who could be invited to speak at the Q
 
 | Name | Contact | Topic | Status |
 |------|---------|-------|--------|
-| siggi | Discord | TBD | Potential |
+| siggi | Discord | Vibe-coding and security | Potential |
