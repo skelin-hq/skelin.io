@@ -10,3 +10,4 @@ The following list are potential speakers who could be invited to speak at the A
 ## Has approved
 
 - Victor Valenzuela / Dala.care (https://github.com/sandsower)
+- Sigurður Guðbrandsson / snjall.is (https://github.com/SGudbrandsson/Codeman)
