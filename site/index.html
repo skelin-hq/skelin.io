@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>skelin — A programming community in Iceland</title>
+  <meta name="description" content="A programming community in Iceland bringing developers, makers, and technology explorers together.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232dd4bf' width='100' height='100' rx='20'/><text x='50' y='72' text-anchor='middle' fill='%230d1117' font-size='70' font-weight='bold' font-family='system-ui'>s</text></svg>">
+  <meta property="og:title" content="skelin — A programming community in Iceland">
+  <meta property="og:description" content="A programming community in Iceland bringing developers, makers, and technology explorers together.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skelin.io">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">skelin</a>
+      <div class="nav-links">
+        <a href="manifesto.html">Manifesto</a>
+        <a href="circles.html">Circles</a>
+        <a href="https://discord.gg/WXKpuH4v9B">Discord</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <h1>skelin</h1>
+      <p class="tagline">A programming community in Iceland bringing developers, makers, and technology explorers together.</p>
+      <div class="hero-actions">
+        <a href="https://discord.gg/WXKpuH4v9B" class="btn btn-primary">Join us on Discord</a>
+        <a href="#about" class="btn btn-secondary">Learn more</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>What We Do</h2>
+        <p>We create spaces for meaningful knowledge exchange — where learning, sharing, and building together take priority over passive consumption. Our gatherings are designed to spark thought and inspire practice.</p>
+
+        <h2>How We Organize</h2>
+        <p>We use a holacracy model with self-organizing <strong>circles</strong>. Anyone can start a circle around a shared interest or purpose. Roles emerge from passion and curiosity, not hierarchy.</p>
+        <p><a href="circles.html">Read more about our circle model &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section id="values" class="section section-alt">
+      <div class="container">
+        <h2>Our Values</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Openness &amp; Inclusivity</h3>
+            <p>Everyone is welcome regardless of background.</p>
+          </div>
+          <div class="card">
+            <h3>Quality over Quantity</h3>
+            <p>Meaningful interactions that leave lasting impact.</p>
+          </div>
+          <div class="card">
+            <h3>Accessibility</h3>
+            <p>Remote and in-person participation.</p>
+          </div>
+          <div class="card">
+            <h3>Freedom to Contribute</h3>
+            <p>Anyone can propose ideas and take initiative.</p>
+          </div>
+          <div class="card">
+            <h3>Safe Space</h3>
+            <p>Zero tolerance for hate speech and harassment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section id="manifesto" class="section">
+      <div class="container">
+        <h2>From Our Manifesto</h2>
+        <div class="quotes">
+          <blockquote>We believe in knowledge shared, not just consumed.</blockquote>
+          <blockquote>We believe in circles, not hierarchies.</blockquote>
+          <blockquote>We believe in learning together.</blockquote>
+        </div>
+        <p><a href="manifesto.html">Read the full manifesto &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section id="events" class="section section-alt">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <div id="events-grid" class="card-grid"></div>
+        <p id="events-empty" hidden>No upcoming events right now. Check back soon!</p>
+        <script>
+          fetch('events.json')
+            .then(function (r) { return r.json(); })
+            .then(function (events) {
+              var now = new Date();
+              now.setHours(0, 0, 0, 0);
+              var upcoming = events.filter(function (e) {
+                return !e.date || new Date(e.date + 'T23:59:59') >= now;
+              });
+              var grid = document.getElementById('events-grid');
+              if (!upcoming.length) {
+                document.getElementById('events-empty').hidden = false;
+                return;
+              }
+              upcoming.forEach(function (e) {
+                var card = document.createElement('div');
+                card.className = 'card';
+                var h3 = document.createElement('h3');
+                h3.textContent = e.title;
+                card.appendChild(h3);
+                var p = document.createElement('p');
+                p.textContent = e.description;
+                card.appendChild(p);
+                if (e.date) {
+                  var d = document.createElement('p');
+                  d.className = 'event-date';
+                  d.textContent = new Date(e.date + 'T00:00:00').toLocaleDateString(undefined, {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                  });
+                  card.appendChild(d);
+                }
+                grid.appendChild(card);
+              });
+            });
+        </script>
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED ============ -->
+    <section id="get-involved" class="section">
+      <div class="container">
+        <h2>Get Involved</h2>
+        <p>Whether you're a seasoned developer or just starting out, there's a place for you here. Join the conversation, propose a circle, or just come say hello.</p>
+        <div class="hero-actions">
+          <a href="https://discord.gg/WXKpuH4v9B" class="btn btn-primary">Join us on Discord</a>
+        </div>
+        <p class="secondary-links">
+          <a href="manifesto.html">Read our manifesto</a>
+          &middot;
+          <a href="circles.html">Learn about circles</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>skelin &mdash; A programming community in Iceland</p>
+      <p><a href="https://github.com/skelin-hq/skelin.io">GitHub</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
